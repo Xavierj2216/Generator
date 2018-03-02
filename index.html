@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Template</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script>
+    $(function() {
+      $('button').click(function() {
+        $('img').fadeIn();
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var brand = $('#brand').val();
+        var title = $('#title').val();
+        var color1 = $('#color1').val();
+        var address = $('#address').val();
+        var background1 = $('#background1').val();
+        
+        $("#Username").html(name);
+        $("#Useremail").html(email);
+        $("#Usertitle").html(title);
+        $("#Brandname").html(brand);
+        $("#Useraddress").html(address);
+        
+        var userColor = $('#color1').val();
+        $('h4').css('color', userColor);
+        var userback = $('#background1').val()
+        $('.card').css("background-color", userback);
+        console.log(name);
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  Name: <input id="name"><br> email: <input id="email"><br> Brand name: <input id="brand"><br> Title: <input id="title"><br> Text Color: <input id="color1"><br> 
+  Address: <input id="address"><br>
+  Background Color: <input id="background1"><br>
+  <!--<input type="radio" id="lightblue" value="color"> light blue-->
+  <!--<input type="radio" id="lightgreen" value="color"> light green<br>-->
+
+  <button>Generate business card</button>
+
+  <h2> Business Card</h2>
+  <img src="add.png" id="addicon" alt="img" style="width:100px;height:100px">
+  <div class="card">
+    <div class="container">
+      <h2 id= "Brandname"></h2>
+      <h4 id="Username"></h4>
+      <h4 id="Usertitle"></h4>
+      <h4 id="Useraddress"></h4>
+      <h4 id="Useremail"></h4>
+      <p></p>
+    </div>
+  </div>
+
+</body>
+
+</html>
