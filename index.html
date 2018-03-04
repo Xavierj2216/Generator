@@ -17,12 +17,14 @@
         var color1 = $('#color1').val();
         var address = $('#address').val();
         var background1 = $('#background1').val();
+        var number = 1 + Math.floor(Math.random() * 100);
         
         $("#Username").html(name);
         $("#Useremail").html(email);
         $("#Usertitle").html(title);
         $("#Brandname").html(brand);
         $("#Useraddress").html(address);
+        $("#ran").html(number)
         
         var userColor = $('#color1').val();
         $('h4').css('color', userColor);
@@ -43,7 +45,6 @@
   <!--<input type="radio" id="lightgreen" value="color"> light green<br>-->
 
   <button>Generate business card</button>
-
   <h2> Business Card</h2>
   <img src="add.png" id="addicon" alt="img" style="width:100px;height:100px">
   <div class="card">
@@ -53,10 +54,10 @@
       <h4 id="Usertitle"></h4>
       <h4 id="Useraddress"></h4>
       <h4 id="Useremail"></h4>
+      <h4 id="ran"></h4>
       <p></p>
     </div>
   </div>
 
 </body>
-
 </html>
